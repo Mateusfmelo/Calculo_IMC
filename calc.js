@@ -5,16 +5,16 @@ function imc() {
   const peso = document.getElementById("peso").value;
   const resultado = document.getElementById("resultado");
 
-  if (altura == "" || peso == "") {
-    alert("Preencha todos os campos para poder fazer o calculo.");
+  if (altura == "" || peso == "") { 
+    alert("Preencha todos os campos para poder fazer o calculo!");
   } else if (altura !== "" && peso !== "") {
-    let valorIMC = (peso / (altura * altura)).toFixed(1);
+    let valorIMC = (peso / (altura * altura)).toFixed(1); 
     let sexo = document.getElementsByName("sexo");
 
     if (sexo[0].checked) {
       if (valorIMC <= 19) {
         resultado.textContent = "Abaixo do Peso";
-        document.querySelector("#resultado").style.background = "yellow";
+        document.querySelector("#resultado").style.background = "black";
       } else if (valorIMC <= 25.7) {
         resultado.textContent = "Peso Normal";
         document.querySelector("#resultado").style.background = "green";
@@ -31,7 +31,7 @@ function imc() {
     } else {
       if (valorIMC <= 19) {
         resultado.textContent = "Abaixo do Peso";
-        document.querySelector("#resultado").style.background = "yellow";
+        document.querySelector("#resultado").style.background = "black";
       } else if (valorIMC <= 25.7) {
         resultado.textContent = "Peso Normal";
         document.querySelector("#resultado").style.background = "green";
